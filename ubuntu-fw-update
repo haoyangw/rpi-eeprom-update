@@ -1,0 +1,13 @@
+#!/bin/bash
+export FIRMWARE_ROOT=/home/exp2/rpi-eeprom/firmware
+export FIRMWARE_RELEASE_STATUS=stable
+export VCMAILBOX=/usr/bin/vcmailbox
+mkdir -p backup
+export FIRMWARE_BACKUP_DIR=/home/exp2/rpi-eeprom/backup
+export BOOTFS=/boot/firmware
+
+# Seems to want the vl805 executable from within  to be in the
+# path.
+export PATH=:/home/exp2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/TurboVNC/bin
+
+. /home/exp2/rpi-eeprom/rpi-eeprom-update ""
